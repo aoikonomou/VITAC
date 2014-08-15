@@ -18,7 +18,30 @@ ApplicationWindow {
     }
 
     Text {
+        id: mainText
         text: qsTr("Hello World")
         anchors.centerIn: parent
     }
+
+
+    Item {
+
+        id: mainContainer
+        anchors.fill: parent
+
+        Rectangle {
+            id: rect
+            width: 500; height: 500
+            color: "lightgray"
+
+            MouseArea {
+
+                anchors.fill: parent
+                onClicked: parent.color = "blue"
+            }
+        }
+
+    }
+
+
 }
