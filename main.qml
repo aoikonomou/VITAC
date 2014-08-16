@@ -2,6 +2,11 @@ import QtQuick 2.2
 import QtQuick.Controls 1.1
 
 ApplicationWindow {
+
+
+    id: mainWindow
+    objectName: "mainWindow"
+
     visible: true
     width: 1280
     height: 720

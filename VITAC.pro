@@ -3,7 +3,8 @@ TEMPLATE = app
 QT += qml quick widgets
 
 SOURCES += main.cpp \
-    ../vitac.cpp
+    vitac.cpp
+
 
 RESOURCES += qml.qrc
 
@@ -14,4 +15,4 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 HEADERS += \
-    ../vitac.h
+    vitac.h

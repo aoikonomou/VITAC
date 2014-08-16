@@ -1,7 +1,7 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
-#include <qmessagebox.h>
-#include <QObject>
+#include "vitac.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -12,16 +12,21 @@ int main(int argc, char *argv[])
 
 
 
+    // Step 1: get access to the root object
+    QObject *rootObject = engine.rootObjects().first();
+    QObject *qmlObject = rootObject->findChild<QObject*>("mainWindow");
 
-//    int a=30;
-//   QMessageBox msgBox;
+    // Step 2a: set or get the desired property value for the root object
+    rootObject->setProperty("height", 100);
+    //qDebug() << rootObject.property("visible")
 
-//   QObject *myExample = object->findChild<QObject*>("textExample");
-//   myExample->setProperty("text", "Paparounes");
+    // Step 2b: set or get the desired property value for any qml object
+    //qmlObject->setProperty("visible", true);
+   // qDebug() << qmlObject.property("visible");
 
-//   msgBox.setText(QString::number(a));
-//   msgBox.exec();
 
+
+vitac andreas;
 
     return app.exec();
 }
