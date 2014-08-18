@@ -4,8 +4,8 @@ import QtQuick.Controls 1.1
 ApplicationWindow {
 
 
-    id: mainWindow
-    objectName: "mainWindow"
+    id: myTest
+   // objectName: "myTest"
 
     visible: true
     width: 1280
@@ -42,11 +42,23 @@ ApplicationWindow {
             MouseArea {
 
                 anchors.fill: parent
-                onClicked: parent.color = "blue"
+
+                Text {
+                    id: serialInput
+                    x: 183
+                    y: 161
+                    width: 309
+                    height: 138
+                    text: qsTr("Serial input")
+                    font.pixelSize: 12
+                }
+             //   onClicked: parent.color = "blue"
             }
         }
 
     }
+
+
 
 
 }
