@@ -15,8 +15,7 @@ int main(int argc, char *argv[])
 
     // Step 1: get access to the root object
     QObject *rootObject = engine.rootObjects().first();
-    QObject *qmlObject = rootObject->findChild<QObject*>("myTest");
-
+    QObject *qmlObject = rootObject->findChild<QObject *>("myTest");
 
     // Step 2a: set or get the desired property value for the root object
     rootObject->setProperty("height", 400);
